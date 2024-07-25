@@ -1,6 +1,36 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 3rem;
+}
+
+.nav-button {
+  border: rgba(139, 138, 189, 0.856) 1px solid;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.buttons {
+  border: rgba(139, 138, 189, 0.856) 1px solid;
+  border-radius: 13px;
+  padding: 10px;
+  font-size: 1.7rem;
+}
+
+.mitraNav {
+  padding-left: 8rem;
+  padding-right: 8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-bottom: 6rem;
+}
+
+@font-face {
+  font-family: "Neut", Arial, sans-serif;
+  src: url("../public/Neut.ttf");
+}
+
+.customFont {
+  font-family: "Neut";
+  font-size: 2.5rem;
 }
