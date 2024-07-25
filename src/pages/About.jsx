@@ -1,7 +1,7 @@
 export default function About() {
     return (
         <div>
-            Somethin bout meeee!
+            <h1>Somethin bout meeee!</h1>
         </div>
     );
 }
