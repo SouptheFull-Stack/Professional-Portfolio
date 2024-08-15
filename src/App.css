@@ -1,36 +1,172 @@
 #root {
-  margin: 0 auto;
-  padding: 3rem;
+  padding-top: 3rem;
+  height: 100vh;
+  width: 100vw;
 }
 
-.nav-button {
-  border: rgba(139, 138, 189, 0.856) 1px solid;
-  border-radius: 20px;
-  padding: 15px;
+.img-box > img {
+  height: 40px;
+  width: 40px;
 }
 
-.buttons {
-  border: rgba(139, 138, 189, 0.856) 1px solid;
-  border-radius: 13px;
+.main-box {
+  padding: 5rem 2rem 0rem 2rem;
+  width: 100vw;
+  height: 75vh;
+}
+
+#portrait {
+  width: 35rem;
+  height: 35rem;
+}
+
+/* .nav-buttons {
+  cursor: pointer;
+  border: rgb(117, 133, 255) 0.125em solid;
+  padding: 0.25em 1em;
+  text-shadow: 0 0 0.2em #fff7, 0 0 0.3em rgb(117, 133, 255);
+  box-shadow: inset 0 0 0.5em rgb(117, 133, 255), 0 0 0.5em rgb(117, 133, 255);
+} */
+
+#contact-form {
+  height: 50%;
+}
+
+:root {
+  --clr-neon: #11abb1;
+  /* --clr-neon: #14f7ff; */
+  --clr-bg: #001414;
+  --font-size: 1.5rem;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.grid-container {
+  display: grid;
+  row-gap: 20px;
+  column-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding: 10px;
-  font-size: 1.7rem;
 }
 
-.mitraNav {
-  padding-left: 8rem;
-  padding-right: 8rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding-bottom: 6rem;
+.project-card {
+  background: rgba(169, 169, 169, 0.082);
+  /* background: rgba(169, 169, 169, 0.082); */
+  border-radius: 8px;
+  box-shadow: 12px 9px 7px rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  text-align: center;
+  font-family: "Dia", Arial, Helvetica, sans-serif;
+  font-size: 1.9rem;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-card h3 {
+  margin-top: 15px;
+  font-size: 2.5rem;
+}
+
+.project-card a {
+  margin-top: 1rem;
+  color: #007bffa1;
+  text-decoration: none;
+}
+/* END */
+
+.nav-box {
+  width: 80%;
+  padding-bottom: 2rem;
+  border-bottom: var(--clr-neon) 1em ridge;
+}
+
+.nav-buttons {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--clr-bg);
+  color: var(--clr-neon);
+  font-family: "Balsamiq Sans";
+  overflow: hidden;
+}
+
+.nav-link {
+  font-size: var(--font-size);
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  border: var(--clr-neon) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  text-shadow: 0 0 0.2em #fff7, 0 0 0.3em var(--clr-neon);
+  box-shadow: inset 0 0 0.5em var(--clr-neon), 0 0 0.5em var(--clr-neon);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--clr-neon);
+  box-shadow: 0 0 2em var(--clr-neon);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+
+.nav-link:hover::after {
+  opacity: 1;
+}
+.nav-link:hover,
+.neon:focus {
+  color: white;
+}
+.nav-link:hover::before {
+  opacity: 0.8;
 }
 
 @font-face {
-  font-family: "Neut", Arial, sans-serif;
-  src: url("../public/Neut.ttf");
+  font-family: "Neut";
+  src: url("/Neut.ttf");
+}
+
+@font-face {
+  font-family: "Dia";
+  src: url("/Dia.ttf");
+}
+
+@font-face {
+  font-family: "Zig";
+  src: url("/Zig.ttf");
 }
 
 .customFont {
-  font-family: "Neut";
-  font-size: 2.5rem;
+  font-family: "Dia", Arial, Helvetica, sans-serif;
+  font-size: 3.5rem;
+}
+
+@media screen and (max-width: 390px) {
+  .nav-box {
+    font-size: 3rem;
+  }
+
+  .nav-button {
+    border: none;
+    padding: 0px;
+    margin-top: 30px;
+  }
+
+  .buttons {
+    font-size: 20px;
+  }
 }

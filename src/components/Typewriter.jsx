@@ -6,7 +6,7 @@ const Typewriter = ({ words, loop, typeSpeed, cursor, cursorStyle, cursorBlinkin
     loop: loop,
     typeSpeed: typeSpeed,
     cursor: cursor,
-    cursorStyle: `{${cursorStyle}}`,
+    cursorStyle: cursorStyle,
     cursorBlinking: cursorBlinking
   });
 
